@@ -1,0 +1,73 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/MarbleTiles.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/DamascusSteel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.24353715776196275 0.010316965013134683 0.9698366939965422 3.0594800649614813
+  position 9.089785572148601 -0.6856417277202617 4.520428981628949
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+  floorTileSize 3 3
+  wallThickness 0.05
+  wallHeight 0.05
+}
+Transform {
+  translation 0.78 1.29 0.31
+  scale 2 2 2
+  children [
+    Shape {
+      appearance MarbleTiles {
+      }
+      geometry Sphere {
+        radius 0.1
+        subdivision 2
+      }
+    }
+  ]
+}
+Solid {
+  translation -1.23 0.22 0.31
+  children [
+    Shape {
+      appearance VarnishedPine {
+      }
+      geometry Box {
+        size 0.5 0.5 0.6
+      }
+    }
+  ]
+}
+Solid {
+  translation 1.74527 0.870012 0.27
+  rotation 0 0 1 -1.047195307179586
+  children [
+    Shape {
+      appearance DamascusSteel {
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Robot {
+  translation 1 0 0.84
+  children [
+    E-puck {
+    }
+  ]
+}
